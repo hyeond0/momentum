@@ -1,57 +1,50 @@
 const quotes = [
   {
-    quote: "I never dreamed about success, I worked for it",
-    author: "Estee Lauder",
+    quote: "준비하지 않은 자는 기회가 와도 소용없다.",
+    author: "알렉시스 드 토크빌",
   },
   {
-    quote: "Do not try to be original, just try to be good.",
-    author: "Paul Rand",
+    quote: "성공은 영원하지 않으며, 실패 역시 그러하다.",
+    author: "델 크로스워드",
   },
   {
-    quote: "Do not be afraid to give up the good to go for the great",
-    author: "John D. Rockefeller",
+    quote: "다른 사람의 좋은 습관을 내 습관으로 만들어라.",
+    author: "빌 게이츠",
   },
   {
-    quote:
-      "If you cannot fly then run. If you cannot run, then walk. And if you cannot walk, then crawl, but whatever you do, you have to keep moving forward.",
-    author: "Martin Luther King Jr.",
+    quote: "한번 포기하면 습관이 된다. 절대 포기하지 말아라.",
+    author: "마이클 조던",
   },
   {
-    quote:
-      "Our greatest weakness lies in giving up. The most certain way to succeed is always to try just one more time.",
-    author: "Thomas Edison",
+    quote: "내일이 곧 지금이다.",
+    author: "엘리너 루즈벨트",
   },
   {
-    quote:
-      "The fastest way to change yourself is to hang out with people who are already the way you want to be",
-    author: "REid Hoffman",
+    quote: "무엇을 시도할 용기도 없으면서 멋진 삶을 바란단 말인가.",
+    author: "빈센트 반 고흐",
   },
   {
-    quote:
-      "Money is like gasoline during a road trip. You do not want to run out of gas on your trip, but you are not doing a tour of gas stations",
-    author: "Tim O Reilly",
+    quote: "오늘 하나는 내일 둘의 가치가 있다.",
+    author: "벤자민 프랭클린",
   },
   {
-    quote:
-      "Some people dream of success, while other people get up every morning and make it happen",
-    author: "Wayne Huizenga",
+    quote: "실패도 배우는 것이 있으면 성공이다.",
+    author: "말콤 포브스",
   },
   {
-    quote:
-      "The only thing worse than starting something and falling.. is not starting something",
-    author: "SEth Godin",
+    quote: "시간은 언제 까지든 당신을 기다리는 것은 아니다.",
+    author: "짐멜",
   },
   {
-    quote:
-      "If you really want to do something, you will find a way. If you do not, you will find an excuse.",
-    author: "Jim Rohn",
+    quote: "오늘 죽을 것처럼 행동하고 영원히 살 것처럼 배워라.",
+    author: "마하트마 간디",
   },
 ];
 
-const quote = document.querySelector(".quote span:first-child");
-const author = document.querySelector(".quote span:last-child");
+const quote = document.querySelector("#quote span:first-child");
+const author = document.querySelector("#quote span:last-child");
 
 const todaysQuote = quotes[Math.floor(Math.random() * quotes.length)];
 
 quote.innerText = todaysQuote.quote;
-author.innerText = todaysQuote.author;
+author.innerText = `- ${todaysQuote.author}`;
