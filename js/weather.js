@@ -11,7 +11,7 @@ function onGeoOk(position) {
       const city = document.querySelector("#weather span:last-child");
       const currentWeather = translateWeather(data.weather[0].main);
       city.innerText = data.name;
-      weather.innerText = `${currentWeather} / ${data.main.temp}°C,`;
+      weather.innerText = `${currentWeather} / ${data.main.temp}°C, `;
     });
 }
 
@@ -51,7 +51,7 @@ function translateWeather(weather) {
   }
 }
 function onGeoError() {
-  alert("Can't find you. No weather for you.");
+  alert("날씨 정보를 불러올 수 없습니다.");
 }
 
 navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError);

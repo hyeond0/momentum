@@ -11,24 +11,31 @@
       <span></span>
       <span></span>
     </div>
-    <div id="clock">
-      <span></span>
-      <h2>00:00</h2>
+    <div id="main-body">
+      <div id="clock">
+        <span></span>
+        <h2>00:00</h2>
+      </div>
+      <form class="hidden" id="login-form">
+        <input
+          required
+          maxlength="15"
+          type="text"
+          placeholder="이름을 입력하세요"
+        />
+        <input type="submit" value="입력" />
+      </form>
+      <h1 class="hidden" id="greeting"></h1>
+      <form action="" class="todo-form hidden">
+        <input
+          type="text"
+          placeholder="Wrtie a To do and Press Enter"
+          required
+        />
+      </form>
+      <ul class="todo-list"></ul>
     </div>
-    <form class="hidden" id="login-form">
-      <input
-        required
-        maxlength="15"
-        type="text"
-        placeholder="What is your name?"
-      />
-      <input type="submit" value="Log In" />
-    </form>
-    <h1 class="hidden" id="greeting"></h1>
-    <form action="" class="todo-form">
-      <input type="text" placeholder="Wrtie a To do and Press Enter" required />
-    </form>
-    <ul class="todo-list"></ul>
+
     <div id="quote">
       <span></span>
       <span></span>
