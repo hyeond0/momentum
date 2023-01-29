@@ -51,6 +51,7 @@ body {
 .main-body {
   height: 70%;
   display: flex;
+  box-sizing: border-box;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -67,12 +68,14 @@ body {
   padding: 0px 20px;
 }
 .clock-time {
-  /* padding: 0px 20px; */
   display: flex;
   align-items: center;
   font-size: 100px;
 }
 
+.clock-time h2 {
+  width: 370px;
+}
 .clock-time span {
   margin-right: 15px;
   font-size: 40px;
@@ -80,6 +83,7 @@ body {
 
 /* main-body greetings */
 #greeting {
+  padding: 0px 20px;
   font-size: 40px;
   font-weight: 600;
   animation: fadeOutGreeting 2s linear forwards;
@@ -175,7 +179,8 @@ body {
 }
 
 .todo-list li > input[type="checkbox"]:checked + label {
-  background-color: rgba(0, 0, 0, 0.938);
+  background: url("/img/check.svg");
+  background-size: cover;
 }
 
 .todo-list span {
@@ -210,5 +215,6 @@ body {
 .row {
   display: flex;
   flex-direction: row;
+  justify-content: space-evenly;
   animation: fadeIn 0.5s ease-in-out forwards;
 }
