@@ -62,13 +62,22 @@ body {
 
 /* main-body clock */
 #clock {
+  display: flex;
+  flex-direction: column;
+}
+
+#clock-date {
+  font-size: 17px;
+  padding: 0px 20px;
+}
+#clock-time {
   /* padding: 0px 20px; */
   display: flex;
   align-items: center;
   font-size: 100px;
 }
 
-#clock span {
+#clock-time span {
   margin-right: 15px;
   font-size: 40px;
 }
@@ -81,6 +90,7 @@ body {
 
 #login-form {
   margin-top: 80px;
+  display: flex;
 }
 #login-form input {
   border: none;
@@ -94,7 +104,8 @@ body {
   font-size: 35px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
-#login-form input:first-child:focus {
+#login-form input:first-child:focus,
+#login-form input:first-child:hover {
   border-color: black;
 }
 #login-form input:first-child::placeholder {
