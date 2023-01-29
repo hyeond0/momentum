@@ -4,6 +4,7 @@ const toDoList = document.querySelector(".todo-list");
 const colorArray = ["#fff5b1", "#ffdce0", "#dcffe4", "#f5f0ff"];
 let toDoArray = [];
 let colorCount = 0;
+let toDoCount = 0;
 const TODOS_KEY = "todos";
 function saveToDoArray() {
   localStorage.setItem(TODOS_KEY, JSON.stringify(toDoArray));
@@ -11,7 +12,8 @@ function saveToDoArray() {
 
 function checkToDo(event) {
   const span = event.target.nextElementSibling;
-  if (this.checked) {
+  const check = event.target.previousElementSibling;
+  if (!check.checked) {
     span.style.textDecoration = "line-through";
     span.style.textDecorationColor = "rgba(0,0,0,0.4)";
   } else {
@@ -24,10 +26,15 @@ function deleteToDo(event) {
   li.remove();
   toDoArray = toDoArray.filter((toDo) => toDo.id !== parseInt(li.id));
   saveToDoArray();
+  toDoCount = toDoCount - 1;
 }
 function paintToDo(newTodo) {
   const checkBox = document.createElement("input");
+  const checkBoxLabel = document.createElement("label");
+  toDoCount = toDoCount + 1;
+  checkBox.id = `check${toDoCount}`;
   checkBox.type = "checkbox";
+  checkBoxLabel.htmlFor = `check${toDoCount}`;
   const li = document.createElement("li");
   li.id = newTodo.id;
   const span = document.createElement("span");
@@ -44,8 +51,9 @@ function paintToDo(newTodo) {
   const button = document.createElement("button");
   button.innerText = "X";
   button.addEventListener("click", deleteToDo);
-  checkBox.addEventListener("change", checkToDo);
+  checkBoxLabel.addEventListener("click", checkToDo);
   li.appendChild(checkBox);
+  li.appendChild(checkBoxLabel);
   li.appendChild(span);
   li.appendChild(button);
   toDoList.appendChild(li);

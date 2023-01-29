@@ -23,7 +23,7 @@ function paintGreetings(username) {
   greeting.classList.remove(HIDDEN_CLASSNAME);
   setTimeout(() => {
     ShowTodo();
-  }, 3000);
+  }, 2500);
 }
 
 function ShowTodo() {
