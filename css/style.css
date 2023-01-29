@@ -13,9 +13,6 @@
 
 @import "weather.css";
 @import "quote.css";
-.hidden {
-  display: none;
-}
 
 #bgImage {
   position: absolute;
@@ -61,23 +58,23 @@ body {
 }
 
 /* main-body clock */
-#clock {
+.clock {
   display: flex;
   flex-direction: column;
 }
 
-#clock-date {
+.clock-date {
   font-size: 17px;
   padding: 0px 20px;
 }
-#clock-time {
+.clock-time {
   /* padding: 0px 20px; */
   display: flex;
   align-items: center;
   font-size: 100px;
 }
 
-#clock-time span {
+.clock-time span {
   margin-right: 15px;
   font-size: 40px;
 }
@@ -86,36 +83,50 @@ body {
 #greeting {
   font-size: 40px;
   font-weight: 600;
+  animation: fadeOutGreeting 2s linear forwards;
 }
 
-#login-form {
+@keyframes fadeOutGreeting {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+.login-form {
   margin-top: 80px;
   display: flex;
 }
-#login-form input {
+.login-form input {
   border: none;
   outline: none;
   background: inherit;
   font-family: "MapoFlowerIsland";
   transition: border-color 0.5s ease-in-out;
 }
-#login-form input:first-child {
+.login-form input:first-child {
   padding: 5px 20px;
   font-size: 35px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
-#login-form input:first-child:focus,
-#login-form input:first-child:hover {
+.login-form input:first-child:focus,
+.login-form input:first-child:hover {
   border-color: black;
 }
-#login-form input:first-child::placeholder {
+.login-form input:first-child::placeholder {
   opacity: 0.8;
 }
 
-#login-form input:last-child {
+.login-form input:last-child {
   font-size: 20px;
 }
-#login-form input:last-child:hover {
+.login-form input:last-child:hover {
   cursor: pointer;
   /* border: 1px solid white; */
   /* border-color: black; */
@@ -133,4 +144,8 @@ body {
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 10px;
+}
+
+.hidden {
+  display: none;
 }

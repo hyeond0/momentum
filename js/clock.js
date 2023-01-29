@@ -1,6 +1,6 @@
-const clockTime = document.querySelector("#clock-time h2");
-const ampm = document.querySelector("#clock-time span");
-const clockDate = document.querySelector("#clock-date span");
+const clockTime = document.querySelector(".clock-time h2");
+const ampm = document.querySelector(".clock-time span");
+const clockDate = document.querySelector(".clock-date span");
 let nowDate = new Date();
 
 function getClockDate() {
