@@ -1,8 +1,10 @@
 const loginForm = document.querySelector(".login-form");
 const loginInput = document.querySelector(".login-form input");
 const greeting = document.querySelector("#greeting");
+
 const clock = document.querySelector(".clock");
 const toDo = document.querySelector(".todo");
+
 const mainBody = document.querySelector(".main-body");
 const HIDDEN_CLASSNAME = "hidden";
 const USERNAME_KEY = "username";

@@ -146,11 +146,32 @@ body {
   flex-direction: column;
 }
 .todo-list li {
+  display: flex;
+  align-items: center;
   margin-bottom: 25px;
   font-size: 28px;
 }
+.todo-list input[type="checkbox"] {
+  /* appearance: none; */
+  border: 1px solid black;
+  cursor: pointer;
+  margin-right: 15px;
+  width: 20px;
+  height: 20px;
+}
+
+.todo-list input[type="checkbox"]:checked {
+  color: black;
+}
 .todo-list span {
   margin-right: 15px;
+}
+.todo-list button {
+  border: none;
+  background: inherit;
+  font-size: 15px;
+  opacity: 0.6;
+  cursor: pointer;
 }
 
 /* quote div */

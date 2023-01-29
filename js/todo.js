@@ -9,6 +9,16 @@ function saveToDoArray() {
   localStorage.setItem(TODOS_KEY, JSON.stringify(toDoArray));
 }
 
+function checkToDo(event) {
+  const span = event.target.nextElementSibling;
+  if (this.checked) {
+    span.style.textDecoration = "line-through";
+    span.style.textDecorationColor = "rgba(0,0,0,0.4)";
+  } else {
+    span.style.textDecoration = "none";
+  }
+}
+
 function deleteToDo(event) {
   const li = event.target.parentElement;
   li.remove();
@@ -16,6 +26,8 @@ function deleteToDo(event) {
   saveToDoArray();
 }
 function paintToDo(newTodo) {
+  const checkBox = document.createElement("input");
+  checkBox.type = "checkbox";
   const li = document.createElement("li");
   li.id = newTodo.id;
   const span = document.createElement("span");
@@ -30,8 +42,10 @@ function paintToDo(newTodo) {
   }
 
   const button = document.createElement("button");
-  button.innerText = "x";
+  button.innerText = "X";
   button.addEventListener("click", deleteToDo);
+  checkBox.addEventListener("change", checkToDo);
+  li.appendChild(checkBox);
   li.appendChild(span);
   li.appendChild(button);
   toDoList.appendChild(li);
