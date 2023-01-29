@@ -21,7 +21,7 @@
           <h2>00:00</h2>
         </div>
       </div>
-      <form action="" class="login-form hidden">
+      <form action="" class="login-form hidden form">
         <input
           required
           maxlength="15"
@@ -33,12 +33,9 @@
 
       <h1 class="hidden" id="greeting"></h1>
       <div class="todo hidden">
-        <form action="" class="todo-form">
-          <input
-            type="text"
-            placeholder="Wrtie a To do and Press Enter"
-            required
-          />
+        <form action="" class="todo-form form">
+          <input type="text" placeholder="오늘 할 일" required />
+          <input type="submit" value="입력" />
         </form>
         <ul class="todo-list"></ul>
       </div>

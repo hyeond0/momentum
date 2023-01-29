@@ -99,37 +99,58 @@ body {
   }
 }
 
-.login-form {
-  margin-top: 80px;
+.form {
   display: flex;
 }
-.login-form input {
+.form input {
   border: none;
   outline: none;
   background: inherit;
   font-family: "MapoFlowerIsland";
   transition: border-color 0.5s ease-in-out;
 }
-.login-form input:first-child {
+.form input:first-child {
   padding: 5px 20px;
   font-size: 35px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
-.login-form input:first-child:focus,
-.login-form input:first-child:hover {
+.form input:first-child:focus,
+.form input:first-child:hover {
   border-color: black;
 }
-.login-form input:first-child::placeholder {
+.form input:first-child::placeholder {
   opacity: 0.8;
 }
 
-.login-form input:last-child {
+.form input:last-child {
   font-size: 20px;
 }
-.login-form input:last-child:hover {
+.form input:last-child:hover {
   cursor: pointer;
   /* border: 1px solid white; */
   /* border-color: black; */
+}
+.login-form {
+  margin-top: 80px;
+}
+
+.todo {
+  display: flex;
+  flex-direction: column;
+}
+.todo-form {
+  margin-bottom: 30px;
+}
+.todo-list {
+  display: flex;
+  flex-direction: column;
+}
+.todo-list li {
+  margin-bottom: 25px;
+  font-size: 28px;
+}
+.todo-list span {
+  margin-right: 15px;
 }
 
 /* quote div */

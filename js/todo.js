@@ -1,9 +1,9 @@
 const toDoForm = document.querySelector(".todo-form");
 const toDoInput = document.querySelector(".todo-form input");
 const toDoList = document.querySelector(".todo-list");
-
+const colorArray = ["#fff5b1", "#ffdce0", "#dcffe4", "#f5f0ff"];
 let toDoArray = [];
-
+let colorCount = 0;
 const TODOS_KEY = "todos";
 function saveToDoArray() {
   localStorage.setItem(TODOS_KEY, JSON.stringify(toDoArray));
@@ -20,6 +20,15 @@ function paintToDo(newTodo) {
   li.id = newTodo.id;
   const span = document.createElement("span");
   span.innerText = newTodo.text;
+  if (colorCount < colorArray.length) {
+    span.style.backgroundColor = colorArray[colorCount];
+    colorCount = colorCount + 1;
+  } else {
+    colorCount = 0;
+    span.style.backgroundColor = colorArray[colorCount];
+    colorCount = colorCount + 1;
+  }
+
   const button = document.createElement("button");
   button.innerText = "x";
   button.addEventListener("click", deleteToDo);
