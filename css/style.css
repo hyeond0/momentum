@@ -48,7 +48,7 @@ body {
 }
 
 /* main-body div */
-#main-body {
+.main-body {
   height: 70%;
   width: 100%;
   display: flex;
@@ -148,4 +148,9 @@ body {
 
 .hidden {
   display: none;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
 }

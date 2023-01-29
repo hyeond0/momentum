@@ -11,8 +11,8 @@
       <span></span>
       <span></span>
     </div>
-    <div id="main-body">
-      <div class="clock">
+    <div class="main-body">
+      <div class="clock hidden">
         <div class="clock-date">
           <span></span>
         </div>
@@ -32,14 +32,16 @@
       </form>
 
       <h1 class="hidden" id="greeting"></h1>
-      <form action="" class="todo-form hidden">
-        <input
-          type="text"
-          placeholder="Wrtie a To do and Press Enter"
-          required
-        />
-      </form>
-      <ul class="todo-list"></ul>
+      <div class="todo hidden">
+        <form action="" class="todo-form">
+          <input
+            type="text"
+            placeholder="Wrtie a To do and Press Enter"
+            required
+          />
+        </form>
+        <ul class="todo-list"></ul>
+      </div>
     </div>
 
     <div id="quote">
