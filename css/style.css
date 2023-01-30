@@ -179,7 +179,7 @@ body {
 }
 
 .todo-list li > input[type="checkbox"]:checked + label {
-  background: url("../img/check.svg");
+  background: url("./../img/check.svg");
   background-size: cover;
 }
 
