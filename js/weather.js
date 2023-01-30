@@ -51,7 +51,13 @@ function translateWeather(weather) {
   }
 }
 function onGeoError() {
-  alert("날씨 정보를 불러올 수 없습니다.");
+  const weather = document.querySelector("#weather span:first-child");
+  weather.innerText = "날씨를 불러올 수 없습니다.";
 }
 
-navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError);
+navigator.geolocation.getCurrentPosition(
+  onGeoOk,
+  setTimeout(() => {
+    onGeoError();
+  }, 1500)
+);
