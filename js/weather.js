@@ -51,13 +51,10 @@ function translateWeather(weather) {
   }
 }
 function onGeoError() {
-  const weather = document.querySelector("#weather span:first-child");
-  weather.innerText = "날씨를 불러올 수 없습니다.";
+  setTimeout(() => {
+    const weather = document.querySelector("#weather span:first-child");
+    weather.innerText = "날씨를 불러올 수 없습니다.";
+  }, 1500);
 }
 
-navigator.geolocation.getCurrentPosition(
-  onGeoOk,
-  setTimeout(() => {
-    onGeoError();
-  }, 1500)
-);
+navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError);
