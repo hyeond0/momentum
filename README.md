@@ -5,7 +5,7 @@
 
 노마드 코더 바닐라 JS로 크롬 앱 만들기 강의
 
-https://hyeond0.github.io/momentum/
+https://hyeond0.github.io/to-do-list/
 
 ### 어려웠던 점 정리
 
